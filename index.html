@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Poetry Corner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌸 My Poetry Corner 🌸</h1>
+    <p>Read my poems and share your thoughts 💭</p>
+    <nav>
+      <a href="#poems">Poems</a>
+      <a href="#submit">Submit</a>
+      <a href="#contact">Contact</a>
+      <a href="#socials">Socials</a>
+    </nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <section id="music">
+    <h2>🎶</h2>
+    <audio controls autoplay loop>
+      <source src="https://files.catbox.moe/phsr6y.mp3" type="audio/mp3">
+      Your browser does not support audio.
+    </audio>
+  </section>
+
+  <section id="poem-of-day">
+    <h2>🌞 Poem of the Day</h2>
+    <p id="random-poem"></p>
+  </section>
+ 
+  <main id="poems">
+    <h2>📂 Poems</h2>
+
+    <div class="categories">
+  <a href="all.html"><button>All</button></a>
+  <a href="love.html"><button>Love</button></a>
+  <a href="nature.html"><button>Nature</button></a>
+  <a href="night.html"><button>Night</button></a>
+    </div>
+
+
+
+    <section class="poem-card love">
+      <h2>Whispers of Dawn</h2>
+      <p>
+        The sun peeks, soft and shy,<br>
+        Painting the sky with tender sighs.
+      </p>
+      <button class="like-btn" onclick="addLike(this)">❤️ Like (<span>0</span>)</button>
+      <div class="reactions">
+        <button onclick="addReaction(this,'💕')">💕</button>
+        <button onclick="addReaction(this,'😢')">😢</button>
+        <button onclick="addReaction(this,'🔥')">🔥</button>
+      </div>
+      <button onclick="downloadPoem('Whispers of Dawn','The sun peeks, soft and shy...')">📥 Download</button>
+      <div class="comments">
+        <h3>Comments</h3>
+        <ul id="comments1"></ul>
+        <input type="text" id="input1" placeholder="Write a comment...">
+        <button onclick="addComment('input1','comments1')">Post</button>
+      </div>
+    </section>
+  </main>
+
+  <section id="submit">
+    <h2>✍️ Submit Your Poem</h2>
+    <textarea id="newPoem" placeholder="Write your poem here..."></textarea>
+    <button onclick="submitPoem()">Submit</button>
+    <ul id="submitted-poems"></ul>
+  </section>
+
+  <section id="quotes">
+    <h2>📜 Random Poetry Quote</h2>
+    <p id="quote"></p>
+    <button onclick="newQuote()">🔄 New Quote</button>
+  </section>
+
+  <section id="counter">
+    <h2>👥 Visitor Count</h2>
+    <p id="visitor-count">0</p>
+  </section>
+
+  <section id="contact">
+    <h2>📩 Contact Me</h2>
+    <p>Email: <a href="mailto:blessingmutesa@gmail.com">blessingmutesa@gmail.com</a></p>
+  </section>
+
+  
+  <section id="socials">
+    <h2>🌐 Let’s Connect</h2>
+    <p>
+      <a href="https://instagram.com/realmutesa" target="_blank">📸 Instagram</a> | 
+      <a href="https://twitter.com/badlikerihh" target="_blank">🐦 Twitter</a> | 
+      <a href="https://tiktok.com/@hotgurrrlbummer" target="_blank">🎵 TikTok</a>
+    </p>
+  </section>
+
+
+
+
+  <footer>
+    <p>✨ Made with love & poetry ✨</p>
+  </footer>
+
+  <canvas id="petals"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
